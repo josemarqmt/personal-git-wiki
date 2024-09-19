@@ -3,11 +3,11 @@
 ## Git Fundamentals
 
 ### Main or Master
-   > Main or Master are the default brands when you create a git repository and often are the main ones.
+When you create a git repository, the default brands are Main or Master, and they are often the main ones.
 
 ### Git states
-  - Modified
-    > The file has changes but there is no confirmation to send.
+  - Modified: 
+    The file has changes but there is no confirmation to send.
     
   
 
