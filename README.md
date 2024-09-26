@@ -112,6 +112,7 @@ git reset --hard HEAD~1 # The files committed will lose any changes made and new
 - add new changes and/or change the message of the last commit
 ```
 git commit --amend -m "message"
+```
 
 
 
