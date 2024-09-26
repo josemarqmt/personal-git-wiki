@@ -14,7 +14,7 @@ When you create a git repository, the default brands are Main or Master, often t
     The file is saved in the repository.
 
 ### Head
-The pointer that references the current point in the change history
+The pointer that references the current point in the commit history
 
 ### .gitignore
 The file indicates that Git should ignore certain file names from being tracked in the repository.
