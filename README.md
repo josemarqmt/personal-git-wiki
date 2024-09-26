@@ -13,6 +13,9 @@ When you create a git repository, the default brands are Main or Master, often t
   - Committed:
     The file is saved in the repository.
 
+### Head
+The pointer that references the current point in the change history
+
 ### .gitignore
 The file indicates that Git should ignore certain file names from being tracked in the repository.
 
@@ -65,11 +68,52 @@ git status
 git status -s # Shows the output of the command in a simplified form.
 ```
 
-- track a file
+- add a file to the staging area
 ```
 git add <file>
-git add -A #track all the files that have been modified in the repository
+git add -A #add all the files that have been modified in the repository to the staging area
 ```
+
+- remove a file from the staging area
+```
+git reset <file>
+```
+
+- creates a commit in the repository history with the current state of the files added to the staging area
+```
+git commit # This will open the previously configured editor to add the message
+git commit -m "title" -m "description" # Write the commit title and description directly using the terminal
+```
+
+- add the files to the staging area and commit simultaneously
+```
+git commit -a -m 'message'
+```
+
+- undo a modified file
+```
+git restore <file>
+git checkout -- <file>
+```
+
+- delete all new untracked files
+```
+git clean -n # shows which files will be deleted
+git clean -f # delete the files
+```
+
+- move HEAD to a previous commit
+```
+git reset --soft HEAD~1 # The files committed in the last commit will be moved to the staging area
+git reset HEAD~1 # The files committed will remain but as unstaged
+git reset --hard HEAD~1 # The files committed will lose any changes made and new files will be removed
+```
+
+- add new changes and/or change the message of the last commit
+```
+git commit --amend -m "message"
+
+
 
 
 
