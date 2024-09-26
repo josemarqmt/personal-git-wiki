@@ -14,14 +14,9 @@ When you create a git repository, the default brands are Main or Master, often t
     The file is saved in the repository.
 
 ### .gitignore
-The file indicates that git must ignore certain name files to be tracked in the repository.
+The file indicates that Git should ignore certain file names from being tracked in the repository.
 
 ## Git Commands
-
-- show installed git version
-```
-git version
-```
 
 ### Git Config
 > add --system, --global or local to a git config command to specify where the configuration will be established
@@ -32,7 +27,7 @@ git version
 > 
 > --local -> The configuration will be applied for the current repository"
 
-- show current git configuration "add --system, --global or --local for filter the configuration you want to see"
+- show current git configuration "add --system, --global or --local to filter the configuration you want to see"
 ```
 git config --list
 ```
@@ -49,9 +44,37 @@ git config --global core.editor "editor name"
 ```
 ### Git Commands
 
+- show installed git version
+```
+git version
+```
+
 - show a command description
 ```
 git <verb> --help
 ```
+
+- initialize a new repository in the folder located
+```
+git init
+```
+
+- show repository status
+```
+git status
+git status -s # Shows the output of the command in a simplified form.
+```
+
+- track a file
+```
+git add <file>
+git add -A #track all the files that have been modified in the repository
+```
+
+
+
+
+
+
   
 
