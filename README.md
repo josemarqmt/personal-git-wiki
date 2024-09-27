@@ -1,5 +1,9 @@
 # Personal Git Wiki (commands and notes for personal use)
 
+1. [Git Fundamentals](#id1)
+2. [Git Commands](#id2)
+
+<a name="id1"> </a>
 ## Git Fundamentals
 
 ### Main or Master
@@ -57,6 +61,7 @@ git config  user.email "<your email>"
 ```
 git config --global core.editor "editor name"
 ```
+<a name="id2"> </a>
 ### Git Commands
 
 - show installed git version
