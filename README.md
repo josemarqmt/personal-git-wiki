@@ -17,7 +17,19 @@ When you create a git repository, the default brands are Main or Master, often t
 The pointer that references the current point in the commit history
 
 ### .gitignore
-The file indicates that Git should ignore certain file names from being tracked in the repository.
+The file indicates that Git should ignore certain file names from being tracked in the repository. <br> 
+Also is possible to create a .gitignore global file in the home user directory  -> "~/.gitignore_global and write" -> "git config --global core.excludesfile" ~/.gitignore_global in the terminal
+> Files that should be ignored
+>
+> Credentials or .env files
+>
+> ide configuration files
+>
+> systems files like .DS_Store
+>
+> log files
+>
+> Static or build files like /dist or /build directory
 
 ## Git Commands
 
@@ -113,6 +125,8 @@ git reset --hard HEAD~1 # The files committed will lose any changes made and new
 ```
 git commit --amend -m "message"
 ```
+
+
 
 
 
