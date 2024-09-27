@@ -129,6 +129,7 @@ git commit --amend -m "message"
 - delete a file from the repository but keep it in your file directory
 ```
 git rm --cached <file>
+```
 
 
 
