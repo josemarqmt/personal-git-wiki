@@ -7,6 +7,7 @@
 2.3 [Git Repository Management](#id2.3)<br>
 2.4 [Git File Management](#id2.4)<br>
 2.5 [Git Commit Management](#id2.5)<br>
+2.6 [Git Branch Management(#id2.6)<br>
 
 <a name="id1"> </a>
 ## Git Fundamentals
@@ -52,7 +53,7 @@ Also is possible to create a .gitignore global file in the home user directory  
 > --global -> The configuration will be applied for the current user"
 > 
 > --local -> The configuration will be applied for the current repository"
-- Show current git configuration "add --system, --global or --local to filter the configuration you want to see"
+- Show current git configuration, add --system, --global or --local to filter the configuration you want to see
 ```
 git config --list
 ```
@@ -64,6 +65,10 @@ git config  user.email "<your email>"
 - Set git default editor
 ```
 git config --global core.editor "editor name"
+```
+- Use fast forward merge whenever possible
+```
+git config --global merge.ff only
 ```
 
 <a name="id2.2"> </a>
@@ -117,7 +122,7 @@ git rm --cached <file>
 
 <a name="id2.5"> </a>
 ### Git Commit Management
-- Creates a commit in the repository history with the current state of the files added to the staging area
+- Create commits in the repository history with the current state of the files added to the staging area
 ```
 git commit # This will open the previously configured editor to add the message
 git commit -m "title" -m "description" # Write the commit title and description directly using the terminal
@@ -139,6 +144,69 @@ git reset --hard HEAD~1 # The files committed will lose any changes made and new
 ```
 git commit --amend -m "message"
 ```
+
+<a name="id2.6"> </a>
+### Git Branch Management
+- Create a new branch in the repository based on the current commit of the branch you're on
+```
+git branch <branch>
+```
+
+- Switch to an existing branch
+```
+git switch <branch>
+```
+
+- Create a new branch and switch to it directly
+```
+git switch -c <branch>
+```
+
+- Show a list of available branchs locally
+```
+git branch
+
+# Return the list sorted by creation date
+git branch --sort=-committerdate #DESC
+git branch --sort=committerdate  #ASC
+```
+
+- Merges changes made in another branch into the current branch
+> git merge use fast-forward or no fast-forward depending on the state of the branches being merged, but you can choose the merge method using --ff-only, --no-ff, --squash, --no-commit commands
+>
+> --ff-only -> Used for merge changes of a branch is ahead of the current branch "the branch ahead must share the previous commits that the current branch has in the same order"
+> 
+> --no-ff -> Used for merge two brands that have diverged, git creates a new commit copying the changes of the branch to be merged into the current branch
+> 
+> --squash -> add the changes of the branch to be merged into the staging area instead of automatically committing them "The parent commits are not referenced in the new commit and the history of the feature branch is lost in the main branch’s log"
+>
+> --no-commit -> same as --squash but history of both branches is preserved, performing a regular merge
+```
+git merge <branch>
+
+git merge --ff-only <branch> # fast forward merge
+
+git merge <branch> --no-ff # no fast forward merge
+
+git merge --squash # no automatically commit merge
+
+git merge --no-commit # no automatically commit regular merge
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
