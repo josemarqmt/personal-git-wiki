@@ -8,6 +8,7 @@
 2.4 [Git File Management](#id2.4)<br>
 2.5 [Git Commit Management](#id2.5)<br>
 2.6 [Git Branch Management](#id2.6)<br>
+2.7 [Git  Remote Repository Management]<br>
 
 <a name="id1"> </a>
 ## Git Fundamentals
@@ -151,18 +152,15 @@ git commit --amend -m "message"
 ```
 git branch <branch>
 ```
-
 - Switch to an existing branch
 ```
 git switch <branch>
 ```
-
 - Create a new branch and switch to it directly
 ```
 git switch -c <branch>
 ```
-
-- Show a list of available branchs locally
+- Show a list of available branches locally
 ```
 git branch
 
@@ -172,15 +170,15 @@ git branch --sort=committerdate  #ASC
 ```
 
 - Merges changes made in another branch into the current branch
-> git merge use fast-forward or no fast-forward depending on the state of the branches being merged, but you can choose the merge method using --ff-only, --no-ff, --squash, --no-commit commands
+> git merge uses fast-forward or no fast-forward depending on the state of the branches being merged, but you can choose the merge method using --ff-only, --no-ff, --squash, --no-commit commands
 >
-> --ff-only -> Used for merge changes of a branch is ahead of the current branch "the branch ahead must share the previous commits that the current branch has in the same order"
+> --ff-only -> Used for merge changes of a branch is ahead of the current branch "The branch ahead must share the previous commits that the current branch has in the same order"
 > 
-> --no-ff -> Used for merge two brands that have diverged, git creates a new commit copying the changes of the branch to be merged into the current branch
+> --no-ff -> Used for merging two brands that have diverged, git creates a new commit copying the changes of the branch to be merged into the current branch
 > 
 > --squash -> add the changes of the branch to be merged into the staging area instead of automatically committing them "The parent commits are not referenced in the new commit and the history of the feature branch is lost in the main branch’s log"
 >
-> --no-commit -> same as --squash but history of both branches is preserved, performing a regular merge
+> --no-commit -> same as --squash but the history of both branches is preserved, performing a regular merge
 ```
 git merge <branch>
 
@@ -192,6 +190,53 @@ git merge --squash # no automatically commit merge
 
 git merge --no-commit # no automatically commit regular merge
 ```
+- Re-committing all commits of the current branch onto a different base commit
+> Use rebase to add changes from a base branch to a branched-out branch and to not create so many merge commits
+> Never should be used to add changes to a base branch because you will modify the commit history
+```
+git rebase <branch>
+```
+- Delete a branch
+```
+git branch -d # only will delete the branch if the branch is merged
+
+git branch -D # delete the branch regardless of whether it is being merged or not
+```
+- Prune the local repository of branches pushed to the remote
+```
+git remote prune <origin> --dry-run # return a list of branches that will be deleted if the command is used
+git remote prune <origin> # delete unnecessary branches
+```
+
+<a name="id2.7"> </a>
+### Git Remote Repository Management
+- Clone a remote repository and bring it locally
+```
+git clone <ssh URL>
+```
+- Show a list of remote repositories that are linked to the local repository
+```
+git remote -v
+```
+- Config git the merge method used when pulling from a repository
+```
+git config pull.rebase false # use the merge method when fast-forward is not available
+
+git config pull.rebase true # use the rebase method when fast-forward is not available
+
+git config pull.ff only # only accept fast-forward method
+```
+- Pull changes from a remote repository 
+```
+git pull <remote> <branch>
+```
+
+- Push changes to a remote repository
+```
+git push <remote> <branch>
+git push <remote> <branch> -f # force and avoid error message
+```
+
 
 
 
