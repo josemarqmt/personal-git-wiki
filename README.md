@@ -8,7 +8,7 @@
 2.4 [Git File Management](#id2.4)<br>
 2.5 [Git Commit Management](#id2.5)<br>
 2.6 [Git Branch Management](#id2.6)<br>
-2.7 [Git  Remote Repository Management]<br>
+2.7 [Git Remote Repository Management](#id2.7)<br>
 
 <a name="id1"> </a>
 ## Git Fundamentals
