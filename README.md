@@ -9,6 +9,9 @@
 2.5 [Git Commit Management](#id2.5)<br>
 2.6 [Git Branch Management](#id2.6)<br>
 2.7 [Git Remote Repository Management](#id2.7)<br>
+2.8 [Git Alias Commands](#id2.8)<br>
+2.9 [Git Temporary Storage](#2.9)<br>
+
 
 <a name="id1"> </a>
 ## Git Fundamentals
@@ -230,12 +233,37 @@ git config pull.ff only # only accept fast-forward method
 ```
 git pull <remote> <branch>
 ```
-
 - Push changes to a remote repository
 ```
 git push <remote> <branch>
 git push <remote> <branch> -f # force and avoid error message
 ```
+
+<a name="id2.8"> </a>
+### Git Alias Commands
+- Create an alias
+```
+git config --global alias.<alias name> <"command">
+```
+- Show a list of configured alias
+```
+git config --get-regexp alias
+```
+
+<a name="id2.9"> </a>
+### Git Temporary Storage
+> It can be useful to move between branches without having to commit what you have modified
+- Save modified files in a temporary storage 
+```
+git stash -m <description># save track files
+
+git stash -u -m <description># save track and untracked files
+```
+- Show a list of saved temporary storage
+```
+git stash list
+```
+
 
 
 
