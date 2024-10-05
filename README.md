@@ -253,15 +253,31 @@ git config --get-regexp alias
 <a name="id2.9"> </a>
 ### Git Temporary Storage
 > It can be useful to move between branches without having to commit what you have modified
-- Save modified files in a temporary storage 
+- Save modified files in a temporary storage called stash
 ```
 git stash -m <description># save track files
 
 git stash -u -m <description># save track and untracked files
 ```
-- Show a list of saved temporary storage
+- Show a list of saved stashes
 ```
 git stash list
+```
+- Apply the last temporary stash and remove it from the stack
+```
+git stash pop
+```
+- Apply the stash according to an index keeping it in the stack
+```
+git stash apply <index>
+```
+- Remove a stash according to an index from the stack
+```
+git stash drop <index>
+```
+- Remove all stashes from the stack
+```
+git stash clear
 ```
 
 
