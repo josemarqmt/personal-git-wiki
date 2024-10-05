@@ -10,7 +10,7 @@
 2.6 [Git Branch Management](#id2.6)<br>
 2.7 [Git Remote Repository Management](#id2.7)<br>
 2.8 [Git Alias Commands](#id2.8)<br>
-2.9 [Git Temporary Storage](#2.9)<br>
+2.9 [Git Temporary Storage](#id2.9)<br>
 
 
 <a name="id1"> </a>
