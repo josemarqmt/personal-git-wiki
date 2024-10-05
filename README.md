@@ -11,6 +11,7 @@
 2.7 [Git Remote Repository Management](#id2.7)<br>
 2.8 [Git Alias Commands](#id2.8)<br>
 2.9 [Git Temporary Storage](#id2.9)<br>
+2.10 [Git Transfer Commits Between Branches](#id2.10)<br>
 
 
 <a name="id1"> </a>
@@ -278,6 +279,14 @@ git stash drop <index>
 - Remove all stashes from the stack
 ```
 git stash clear
+```
+
+<a name="id2.10"> </a>
+### Git Transfer Commits Between Branches
+- Apply the commit using its sha reference
+```
+git cherry-pick <commit-sha>
+git cherry-pick <commit-sha> -e # edit commit message
 ```
 
 
