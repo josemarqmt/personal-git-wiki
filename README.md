@@ -15,7 +15,7 @@
 
 
 <a name="id1"> </a>
-## Git Fundamentals
+## 1. Git Fundamentals
 
 ### Main or Master
 When you create a git repository, the default brands are Main or Master, often the main ones.
@@ -47,10 +47,10 @@ Also is possible to create a .gitignore global file in the home user directory  
 > Static or build files like /dist or /build directory
 
 <a name="id2"> </a>
-## Git Commands
+## 2. Git Commands
 
 <a name="id2.1"> </a>
-### Git Config - Get and set repository or global options
+### 2.1 Git Config - Get and set repository or global options
 > add --system, --global or local to a git config command to specify where the configuration will be established
 > 
 > --system -> The configuration will be applied for the entire systems and repository including all the users
@@ -77,7 +77,7 @@ git config --global merge.ff only
 ```
 
 <a name="id2.2"> </a>
-### Git Essential Commands
+### 2.2 Git Essential Commands
 - Show installed git version
 ```
 git version
@@ -88,7 +88,7 @@ git <verb> --help
 ```
 
 <a name="id2.3"> </a>
-### Git Repository Management
+### 2.3 Git Repository Management
 - Initialize a new repository in the folder located
 ```
 git init
@@ -100,7 +100,7 @@ git status -s # Shows the output of the command in a simplified form.
 ```
 
 <a name="id2.4"> </a>
-### Git File Management
+### 2.4 Git File Management
 - Track a file and add it to the staging area
 ```
 git add <file>
@@ -126,7 +126,7 @@ git rm --cached <file>
 ```
 
 <a name="id2.5"> </a>
-### Git Commit Management
+### 2.5 Git Commit Management
 - Create commits in the repository history with the current state of the files added to the staging area
 ```
 git commit # This will open the previously configured editor to add the message
@@ -151,7 +151,7 @@ git commit --amend -m "message"
 ```
 
 <a name="id2.6"> </a>
-### Git Branch Management
+### 2.6 Git Branch Management
 - Create a new branch in the repository based on the current commit of the branch you're on
 ```
 git branch <branch>
@@ -213,7 +213,7 @@ git remote prune <origin> # delete unnecessary branches
 ```
 
 <a name="id2.7"> </a>
-### Git Remote Repository Management
+### 2.7 Git Remote Repository Management
 - Clone a remote repository and bring it locally
 ```
 git clone <ssh URL>
@@ -241,7 +241,7 @@ git push <remote> <branch> -f # force and avoid error message
 ```
 
 <a name="id2.8"> </a>
-### Git Alias Commands
+### 2.8 Git Alias Commands
 - Create an alias
 ```
 git config --global alias.<alias name> <"command">
@@ -252,7 +252,7 @@ git config --get-regexp alias
 ```
 
 <a name="id2.9"> </a>
-### Git Temporary Storage
+### 2.9 Git Temporary Storage
 > It can be useful to move between branches without having to commit what you have modified
 - Save modified files in a temporary storage called stash
 ```
@@ -282,7 +282,7 @@ git stash clear
 ```
 
 <a name="id2.10"> </a>
-### Git Transfer Commits Between Branches
+### 2.10 Git Transfer Commits Between Branches
 - Apply the commit using its sha reference
 ```
 git cherry-pick <commit-sha>
