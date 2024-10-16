@@ -1,4 +1,4 @@
-# Personal Git Wiki (commands and notes for personal use)
+#  <img src="https://static-00.iconduck.com/assets.00/git-icon-2048x2048-juzdf1l5.png" alt="git_icon" style="width:50px;"/> Personal Git Wiki (commands and notes for personal use)
 
 1. [Git Fundamentals](#id1)
 2. [Git Commands](#id2)<br>
